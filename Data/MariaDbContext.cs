@@ -1,3 +1,4 @@
+using GradesService.Models;
 using Microsoft.EntityFrameworkCore;
 
 public class MariaDbContext : DbContext
