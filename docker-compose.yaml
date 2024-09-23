@@ -5,7 +5,6 @@ services:
     container_name: mariadb-grades
     environment:
       MARIADB_DATABASE: gradesdb
-      MARIADB_USER: user
-      MARIADB_PASSWORD: password
+      MARIADB_ROOT_PASSWORD: password
     ports:
       - "3306:3306"
