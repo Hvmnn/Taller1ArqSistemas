@@ -1,0 +1,11 @@
+version: '3.8'
+services:
+  mariadb:
+    image: mariadb:latest
+    container_name: mariadb-grades
+    environment:
+      MARIADB_DATABASE: gradesdb
+      MARIADB_USER: user
+      MARIADB_PASSWORD: password
+    ports:
+      - "3306:3306"
