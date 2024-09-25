@@ -1,3 +1,4 @@
+using GradesService.Data;
 using GradesService.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -23,9 +24,9 @@ namespace GradesService.Controllers
             if(!_context.Grades.Any())
             {
                 _context.Grades.AddRange(
-                    new Grades { subjectName = "progra", gradeName = "catedra 1", grade = 44, comment = "maoma"},
-                    new Grades { subjectName = "progra", gradeName = "catedra 2", grade = 33, comment = "malo"},
-                    new Grades { subjectName = "progra", gradeName = "catedra 3", grade = 70, comment = "excelente"}
+                    new Grades { SubjectName = "progra", GradeName = "catedra 1", Grade = 44, Comment = "maoma"},
+                    new Grades { SubjectName = "progra", GradeName = "catedra 2", Grade = 33, Comment = "malo"},
+                    new Grades { SubjectName = "progra", GradeName = "catedra 3", Grade = 70, Comment = "excelente"}
                 );
 
                 _context.SaveChanges();
