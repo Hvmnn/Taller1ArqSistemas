@@ -1,4 +1,5 @@
 using Microsoft.EntityFrameworkCore;
+using GradesService.Data;
 
 var builder = WebApplication.CreateBuilder(args);
 
