@@ -1,8 +1,8 @@
 public class CreateGradeDto
 {
-    public string StudentId { get; set; }
-    public string Subject { get; set; }
-    public string GradeName { get; set; }
-    public decimal GradeValue { get; set; }
-    public string Comment { get; set; }
+    public required string StudentId { get; set; }
+    public required string Subject { get; set; }
+    public required string GradeName { get; set; }
+    public required decimal GradeValue { get; set; }
+    public required string Comment { get; set; }
 }
