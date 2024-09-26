@@ -8,11 +8,13 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+var connectionString = Environment.GetEnvironmentVariable("MARIADB_CONNECTION_STRING");
+
+var serverVersion = new MySqlServerVersion(new Version(10, 7, 4));
+
 builder.Services.AddDbContext<MariaDbContext>(options =>
-{
-    var connectionString = builder.Configuration.GetConnectionString("MariaDb");
-    options.UseMySql(connectionString, ServerVersion.AutoDetect(connectionString));
-});
+    options.UseMySql(connectionString, serverVersion));
+
 
 builder.Services.AddControllers();
 
